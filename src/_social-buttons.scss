@@ -1,0 +1,11 @@
+@import "_variables";
+
+@mixin social-button($props) {
+  @each $social in $socials {
+    .btn-#{nth($social, 1)} {
+      @each $prop in $props {
+        #{$prop}: #{nth($social, 2)};
+      }
+    }
+  }
+}
